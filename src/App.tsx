@@ -1,35 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import PrivateRoute from "./routes/PrivateRoute";
+import Main from "./components/Main/Main";
+import { Flowbite } from "flowbite-react";
+
+const customTheme = {
+  button: {
+    size: {
+      middle:
+        "text-xs px-2 py-1 md:text-sm md:px-4 md:py-1.5 xl:text-base xl:px-6 xl:py-2 2xl:text-xl",
+    },
+  },
+  pagination: {
+    pages: {
+      selector: {
+        active:
+          "bg-cyan-50 text-white hover:bg-cyan-100 hover:text-cyan-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white",
+      },
+    },
+  },
+  textInput: {
+    field: {
+      rightIcon: {
+        base: "pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3",
+        svg: "h-5 w-5 text-gray-500 dark:text-gray-400 animate-spin",
+      },
+    },
+  },
+};
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <Flowbite theme={{ theme: customTheme }}>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <Router>
+          <Routes>
+            {/* Wrap protected routes with PrivateRoute */}
+            <Route path="/" element={<PrivateRoute />}>
+              <Route path="/" element={<Main />}>
+                {/* Nested routes */}
+                <Route index element={<Home />} /> {/* Default child route */}
+                <Route path="dashboard" element={<Home />} />
+              </Route>
+            </Route>
+          </Routes>
+        </Router>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </Flowbite>
+  );
 }
 
-export default App
+export default App;

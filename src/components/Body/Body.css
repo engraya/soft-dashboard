@@ -1,0 +1,9 @@
+.balances::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+}
+
+.Activity-table button[role="tab"] {
+    width: 150px;
+    padding: 10px 20px;
+}
