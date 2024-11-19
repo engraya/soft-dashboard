@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router";
 import Header from "../Header/Header";
 import { useEffect, useState } from "react";
 import Sidenav from "../SideNav/Sidenav";
+import Header2 from "../Header/Header2";
 
 function Main() {
   const [showSideBar, setShowSideBar] = useState(false);
@@ -31,10 +32,9 @@ function Main() {
   }, [location.pathname]);
 
   return (
-    <div className="flex bg-white">
+    <div className="flex">
       <Sidenav showSideBar={showSideBar} setShowSideBar={setShowSideBar} />
-      
-      <div className="relative w-full lg:ml-64">
+      <div className="relative w-full lg:ml-56">
       <div
             className={`${
               showSideBar &&
@@ -42,7 +42,7 @@ function Main() {
             }`}
             onClick={() => setShowSideBar(false)}
           ></div>
-        <Header setShowSideBar={setShowSideBar} showSideBar={showSideBar} pageDescription={pageDescription} />
+        <Header setShowSideBar={setShowSideBar} showSideBar={showSideBar}/>
         <Outlet />
       </div>
     </div>
