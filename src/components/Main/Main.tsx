@@ -1,8 +1,7 @@
 import { Outlet, useLocation } from "react-router";
 import Header from "../Header/Header";
 import { useEffect, useState } from "react";
-import Sidenav from "../SideNav/Sidenav";
-import Header2 from "../Header/Header2";
+import SideNav from "../SideNav/SideNav";
 
 function Main() {
   const [showSideBar, setShowSideBar] = useState(false);
@@ -33,7 +32,7 @@ function Main() {
 
   return (
     <div className="flex">
-      <Sidenav showSideBar={showSideBar} setShowSideBar={setShowSideBar} />
+      <SideNav showSideBar={showSideBar} setShowSideBar={setShowSideBar} />
       <div className="relative w-full lg:ml-56">
       <div
             className={`${

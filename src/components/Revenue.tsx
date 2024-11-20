@@ -12,7 +12,8 @@ function Revenue() {
   };
 
   // Close the modal if clicked outside of it
-  const handleOutsideClick = (e) => {
+  const handleOutsideClick = (e : any) => {
+    // @ts-ignore
     if (modalRef.current && !modalRef.current.contains(e.target)) {
       setIsModalOpen(false);
     }

@@ -24,7 +24,7 @@ type Props = {
 };
 
 
-function Sidenav({ showSideBar } : Props) {
+function SideNav({ showSideBar } : Props) {
   const [isOperationsSubMenusOpen, setIsOperationsSubMenusOpen] = useState(false);
   const [isCrmSubMenusOpen, setIsCrmSubMenusOpen] = useState(false);
 
@@ -124,4 +124,4 @@ function Sidenav({ showSideBar } : Props) {
   );
 }
 
-export default Sidenav;
+export default SideNav;
