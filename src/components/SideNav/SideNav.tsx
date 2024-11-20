@@ -1,5 +1,4 @@
-import React, { useEffect, useRef  } from "react";
-import { useLocation } from "react-router-dom";
+import React from "react";
 import { Flowbite } from "flowbite-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";

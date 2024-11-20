@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { bbq, chicken, dark, fried, shaking, surf } from "../assets/menu";
 
 

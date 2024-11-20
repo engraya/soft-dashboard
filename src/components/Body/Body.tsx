@@ -1,4 +1,3 @@
-import React from 'react'
 import DashbaordCard from '../DashbaordCard'
 import {cardsData} from "../../../data/cards"
 import CustomerList from '../CustomerList'

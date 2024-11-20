@@ -1,5 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
-import Chart from './Chart';
+import { useState, useRef, useEffect } from 'react';
 import { BsThreeDots } from "react-icons/bs";
 import { FaEye, FaTrashAlt } from 'react-icons/fa'; // Icons for the options
 import { PiUploadSimpleLight } from "react-icons/pi";

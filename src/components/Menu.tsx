@@ -1,4 +1,4 @@
-import React from 'react'
+
 import MenuGallery from './MenuGallery'
 function Menu() {
   return (

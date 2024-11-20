@@ -1,4 +1,4 @@
-import React from 'react'
+
 type CardProps = {
     title: string;
     value: string;
