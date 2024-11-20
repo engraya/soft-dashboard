@@ -7,6 +7,7 @@ function Main() {
   const [showSideBar, setShowSideBar] = useState(false);
   const [pageDescription, setPageDescription] = useState("");
   const location = useLocation();
+  console.log(pageDescription);
 
   useEffect(() => {
     switch (location.pathname) {
