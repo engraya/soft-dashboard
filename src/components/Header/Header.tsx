@@ -8,10 +8,10 @@ type Props = {
 
 export default function Header({ setShowSideBar, showSideBar }: Props) {
   return (
-    <nav className="w-full lg:w-[calc(100%-15.5rem)] fixed top-0 z-40 p-4 bg-white border-gray-200 dark:bg-gray-900">
+    <nav className="w-full lg:w-[calc(100%-13.5rem)] fixed top-0 z-40 p-4 bg-white border-gray-200 dark:bg-gray-900">
       <div className="flex flex-wrap items-center justify-between">
         {/* Logo and Greeting */}
-        <div className="flex flex-col ml-16">
+        <div className="hidden md:flex flex-col ml-16">
           <h1 className="text-2xl font-semibold whitespace-nowrap dark:text-white">
             Hi Taylor!
           </h1>
@@ -103,7 +103,7 @@ export default function Header({ setShowSideBar, showSideBar }: Props) {
               />
     
             </div>
-            <div className="flex w-[110px] h-[24px] items-center">
+            <div className="flex w-[130px] h-[24px] items-center">
                 <h1 className="text-xl font-bold text-[#111827] whitespace-nowrap dark:text-white">
                   Tynisha Obey
                 </h1>

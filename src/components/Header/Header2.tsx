@@ -2,8 +2,8 @@ function Header2() {
   return (
 <nav className="w-full lg:w-[calc(100%-15.5rem)] fixed top-0 z-40 p-4 bg-white border-gray-200 dark:bg-gray-900">
   <div className="flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="https://flowbite.com/" className="flex flex-col items-center space-x-3 rtl:space-x-reverse">
-      <h1 className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Hi Taylor!.</h1>
+    <div  className="flex-col hidden md:flex items-center space-x-3 rtl:space-x-reverse">
+      <h1 className="self-center text-5xl font-semibold whitespace-nowrap dark:text-white">Hi Taylor!.</h1>
       <p className='text-sm font-normal text-gray-500'>Lets check your store today</p>
     </a>
     <div className="flex md:order-2">

@@ -32,7 +32,7 @@ const customTheme = {
 function App() {
   return (
     <Flowbite theme={{ theme: customTheme }}>
-      <div>
+      <div className="bg-[#F8F9FF]">
         <Router>
           <Routes>
             {/* Wrap protected routes with PrivateRoute */}

@@ -4,6 +4,8 @@ import { Flowbite } from "flowbite-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { bag, document, logo, users, chart, icon } from "../../assets";
+import SideBadge from "../SideBadge";
+
 
 const customTheme = {
   button: {
@@ -26,31 +28,8 @@ type Props = {
 function Sidenav({ showSideBar } : Props) {
   const [isOperationsSubMenusOpen, setIsOperationsSubMenusOpen] = useState(false);
   const [isCrmSubMenusOpen, setIsCrmSubMenusOpen] = useState(false);
-  const [isRequestSubMenusOpen, setIsRequestSubMenusOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
-  const toggleDropdown = () => {
-    setIsOpen((prev) => !prev);
-  };
-
-  const toggleRequestSubMenus = () => {
-    setIsRequestSubMenusOpen(!isRequestSubMenusOpen);
-  };
 
 
-  const handleClickOutside = (event : any) => {
-    if (dropdownRef.current && !dropdownRef.current?.contains(event.target)) {
-      setIsOpen(false);
-      setIsRequestSubMenusOpen(!isRequestSubMenusOpen);WWWW
-    }
-  };
-
-  const location = useLocation();
- 
-  const isActiveLink = (path : string) => {
-    return location.pathname === path;
-  };
 
 
   const toggleOperationsSubMenus = () => {
@@ -69,7 +48,7 @@ function Sidenav({ showSideBar } : Props) {
   return (
     <Flowbite theme={{ theme: customTheme }}>
       <div
-        className={`flex flex-col justify-between fixed top-0 left-0 z-50 w-[271px] h-full overflow-y-auto bg-[#EFF3FB] p-3 text-blue-11 transition-transform ${
+        className={`flex flex-col justify-between fixed top-0 left-0 z-50 w-[271px] h-full overflow-y-auto bg-white p-3 text-blue-11 transition-transform ${
           showSideBar ? "translate-x-0 " : "-translate-x-full lg:translate-x-0"
         }`}
       >
@@ -140,6 +119,7 @@ function Sidenav({ showSideBar } : Props) {
               </li>
               </ul>
         </div>
+        <SideBadge/>
       </div>
     </Flowbite>
   );
