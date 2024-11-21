@@ -26,7 +26,7 @@ function Body() {
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 mt-8 mb-8 gap-4">
   {/* Large item */}
-  <div className="relative overflow-hidden rounded-2xl shadow-lg group">
+  <div className="relative rounded-2xl shadow-lg group">
     <Revenue />
   </div>
   {/* Small item */}
