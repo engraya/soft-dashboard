@@ -1,50 +1,54 @@
-# React + TypeScript + Vite
+# Chucky Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Frontend Framework: React.js
+- CSS Framework: Tailwind CSS
+- Version Control: Git and GitHub
+- Package Manager: npm or yarn
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- Responsive Design: Fully responsive UI for mobile, tablet, and desktop screens.
+- Table Responsiveness: Tables adjust dynamically for smaller screens with horizontal scrolling enabled.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+First, clone this repo and run `npm install`
+
+To start the app run:
+
+```bash
+npm run dev 
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+
+Responsive Design
+The app is optimized for various screen sizes, ensuring usability on both mobile and desktop devices.
+
+##  Contributing
+We welcome contributions to improve SoftEmployee! Here’s how you can get started:
+
+- Fork the repository.
+- Create a feature branch: git checkout -b feature-name.
+- Commit your changes: git commit -m "Add feature-name".
+- Push to your branch: git push origin feature-name.
+- Open a Pull Request.
+
+## Deploy on Vercel
+
+Check out the live version of the app at (https://classic-chucky-dashboard.vercel.app/) for more details.
+
+## Contact
+For questions or collaboration, reach out to:
+
+- Name: Ahmad
+- Email: engrahmadaya@gmail.com
+- Portfolio: https://engrahmadaya.vercel.app
+- GitHub: https://github.com/engraya
